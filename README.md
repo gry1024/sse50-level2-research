@@ -68,12 +68,20 @@
 
 已通过 6 个行为测试：毫秒时间解析、休市/集合竞价边界、最低佣金与印花税、下单延迟/整手约束、禁止跨午休、十档 VWAP 和容量失败。随机种子固定为 42。
 
-## 复现
+## 环境与运行方式
+
+要求 Python 3.10 或以上、uv；已验证环境为 Ubuntu 22.04（WSL2）、Python 3.10.12、Polars 2.0.0、NumPy 2.2.6、PyArrow 25.0.1、Matplotlib 3.10.9。使用仓库的 `uv.lock` 安装固定依赖；图表使用无界面的 Agg 后端，无需图形桌面或 GPU。
+
+以下命令在仓库根目录执行。数据文件必须保持原名：`sse50_20260923/snp_20260923.parquet`、`exe_20260923.parquet`、`ord_20260923.parquet`。原始数据约 220 MiB，处理时会载入三张表，需预留数 GB 内存。
+
+`research.py` 完成清洗、特征、盘口分析与底仓回转实验；`execution.py` 使用前一步特征比较买入执行成本；`order_flow.py` 汇总委托和成交活动；`make_report.py` 根据结果生成本 README 与嵌入图表的离线 HTML。因此应按下面的顺序运行。详细指标、训练网格和逐笔记录均在 `results/`，原始数据与完整派生特征通过 `.gitignore` 排除。
+
+## Quickstart
 
 原始教学数据来自 [课程 issue #6](https://github.com/aslan9/pku_quantllm/issues/6)。将三个 parquet 放入 `sse50_20260923/`。
 
 ```bash
-uv sync --extra dev
+uv sync --locked --extra dev
 uv run python research.py
 uv run python execution.py
 uv run python order_flow.py
@@ -84,3 +92,4 @@ uv run python -m pytest
 代码、图表、训练网格、逐笔实验记录、统计 JSON 可公开复核；原始 parquet 和派生完整快照特征不上传。`results/dashboard.html` 可直接打开。
 
 交易规则参考：[上交所 2026 年交易规则 3.1.4](https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml)、[上交所股票交易税费说明](https://one.sse.com.cn/onething/gptz/)。佣金和过户费是本实验假设，实际以账户费率为准。
+
