@@ -1,0 +1,14 @@
+{
+  "mode": "paper_only",
+  "signal": "obi5",
+  "condition": ">=0.6",
+  "delay_seconds": 900,
+  "max_order_cny": 10000,
+  "lot_size": 100,
+  "max_signal_ask1_participation": 0.01,
+  "max_fill_depth_participation": 0.1,
+  "max_trades_per_stock_per_day": 1,
+  "allow_same_day_sell": false,
+  "enable_live": false,
+  "reason": "Single-day exploratory results, confidence interval crosses zero, held-out stocks negative."
+}

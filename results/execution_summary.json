@@ -1,0 +1,49 @@
+{
+  "selected": {
+    "feature": "obi5",
+    "direction": 1,
+    "threshold": 0.6,
+    "horizon": 900,
+    "trades": 25,
+    "failures": 0,
+    "eligible": true,
+    "saving_bps": 15.35137842095641
+  },
+  "metrics": {
+    "morning_train": {
+      "trades": 25,
+      "capacity_failures": 0,
+      "saving_cny": 198.10032578630583,
+      "saving_bps": 15.35137842095641,
+      "win_rate": 0.48,
+      "mean_trade_bps_ci95": [
+        -2.1743196454379077,
+        22.92937159080278
+      ]
+    },
+    "afternoon_all": {
+      "trades": 21,
+      "capacity_failures": 0,
+      "saving_cny": 30.099082573510064,
+      "saving_bps": 2.8963148063354898,
+      "win_rate": 0.47619047619047616,
+      "mean_trade_bps_ci95": [
+        -2.2271999954463935,
+        14.377995399205036
+      ]
+    },
+    "afternoon_heldout": {
+      "trades": 4,
+      "capacity_failures": 0,
+      "saving_cny": -8.000263107299805,
+      "saving_bps": -4.379865948054052,
+      "win_rate": 0.25,
+      "mean_trade_bps_ci95": [
+        -10.64961375021279,
+        17.017801308854605
+      ]
+    }
+  },
+  "interpretation": "Incremental purchase-cost saving versus immediate buy for an already intended identical quantity. Not investment return. Buy and hold, no intraday resale. Morning and afternoon are separate counterfactual experiments, not combined daily trading.",
+  "evaluation_status": "Exploratory chronological split, not pristine out-of-sample: execution sizing and strategy family were revised after pilot afternoon inspection."
+}

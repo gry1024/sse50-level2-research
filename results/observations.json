@@ -1,0 +1,13 @@
+{
+  "spread_p50_bps": 3.901486280487805,
+  "spread_p90_bps": 18.638866778941892,
+  "stock_median_spread_min_max_bps": [
+    0.7515948165342142,
+    25.542759275099133
+  ],
+  "stocks_down": 37,
+  "equal_stock_open_to_1457_mid_bps": -54.12566057745783,
+  "eligible_roundtrip_configs": 6,
+  "positive_eligible_roundtrip_configs": 0,
+  "execution_savings_after_extra_5bps": -21.861917155646434
+}

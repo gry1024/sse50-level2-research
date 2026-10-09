@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-23",
+  "inventory": [
+    {
+      "file": "snp_20260923.parquet",
+      "rows": 252631,
+      "symbols": 50,
+      "bytes": 26806291,
+      "sha256": "ac69d2f1810a24a15cb4c90183a6d3ea7ee31eccbcd98c58ed1f7f7f7c34aa87",
+      "schema": {
+        "AccTurnover": "Int64",
+        "AccVolume": "Int64",
+        "AfterMatchItem": "Int32",
+        "AfterPrice": "Float32",
+        "AfterTurnover": "Int64",
+        "AfterVolume": "Int32",
+        "AskAvgPrice": "Float32",
+        "AskPrice1": "Float32",
+        "AskPrice2": "Float32",
+        "AskPrice3": "Float32",
+        "AskPrice4": "Float32",
+        "AskPrice5": "Float32",
+        "AskPrice6": "Float32",
+        "AskPrice7": "Float32",
+        "AskPrice8": "Float32",
+        "AskPrice9": "Float32",
+        "AskPrice10": "Float32",
+        "AskVolume1": "Float64",
+        "AskVolume2": "Float64",
+        "AskVolume3": "Float64",
+        "AskVolume4": "Float64",
+        "AskVolume5": "Float64",
+        "AskVolume6": "Float64",
+        "AskVolume7": "Float64",
+        "AskVolume8": "Float64",
+        "AskVolume9": "Float64",
+        "AskVolume10": "Float64",
+        "BSFlag": "Int8",
+        "BidAvgPrice": "Float32",
+        "BidPrice1": "Float32",
+        "BidPrice2": "Float32",
+        "BidPrice3": "Float32",
+        "BidPrice4": "Float32",
+        "BidPrice5": "Float32",
+        "BidPrice6": "Float32",
+        "BidPrice7": "Float32",
+        "BidPrice8": "Float32",
+        "BidPrice9": "Float32",
+        "BidPrice10": "Float32",
+        "BidVolume1": "Float64",
+        "BidVolume2": "Float64",
+        "BidVolume3": "Float64",
+        "BidVolume4": "Float64",
+        "BidVolume5": "Float64",
+        "BidVolume6": "Float64",
+        "BidVolume7": "Float64",
+        "BidVolume8": "Float64",
+        "BidVolume9": "Float64",
+        "BidVolume10": "Float64",
+        "High": "Float32",
+        "Low": "Float32",
+        "MatchItem": "Int32",
+        "Open": "Float32",
+        "PreClose": "Float32",
+        "Price": "Float32",
+        "Time": "Int32",
+        "TotalAskVolume": "Int64",
+        "TotalBidVolume": "Int64",
+        "Turnover": "Int64",
+        "Volume": "Int32",
+        "Symbol": "Int32"
+      }
+    },
+    {
+      "file": "exe_20260923.parquet",
+      "rows": 3792934,
+      "symbols": 50,
+      "bytes": 78166158,
+      "sha256": "ec1774c557600549992f1c349705fdacdddeabdb58750a8fba4d2198f9207222",
+      "schema": {
+        "AskOrder": "Int32",
+        "BSFlag": "Int8",
+        "BidOrder": "Int32",
+        "BizIndex": "Int32",
+        "Channel": "Int32",
+        "FunctionCode": "Int8",
+        "Index": "Int32",
+        "OrderKind": "Int8",
+        "Price": "Float32",
+        "Time": "Int32",
+        "Volume": "Int32",
+        "Symbol": "Int32"
+      }
+    },
+    {
+      "file": "ord_20260923.parquet",
+      "rows": 6276360,
+      "symbols": 50,
+      "bytes": 125584504,
+      "sha256": "5e3fa7f96edc130262661bf379a5c367952327d36b0936e720cba907e78bd61b",
+      "schema": {
+        "BizIndex": "Int32",
+        "Channel": "Int64",
+        "FunctionCode": "Int8",
+        "OrderKind": "Int8",
+        "OrderNumber": "Int32",
+        "OrderOriNo": "Int32",
+        "Price": "Float32",
+        "Time": "Int32",
+        "Volume": "Int32",
+        "Symbol": "Int32"
+      }
+    }
+  ],
+  "quality": {
+    "raw_snapshots": 252631,
+    "valid_continuous_snapshots": 236581,
+    "removed": 16050,
+    "duplicate_symbol_time_rows": 0,
+    "locked_or_crossed": 0,
+    "zero_quote": 0
+  },
+  "selected": {
+    "feature": "obi5",
+    "direction": -1,
+    "threshold": 0.6,
+    "horizon": 900,
+    "trades": 12,
+    "capacity_failures": 0,
+    "train_net_bps": -36.854916679856025,
+    "eligible": true
+  },
+  "train_symbols": [
+    600028,
+    600031,
+    600036,
+    600089,
+    600111,
+    600183,
+    600276,
+    600309,
+    600406,
+    600519,
+    600809,
+    600887,
+    601012,
+    601088,
+    601127,
+    601166,
+    601211,
+    601288,
+    601318,
+    601328,
+    601398,
+    601601,
+    601628,
+    601658,
+    601668,
+    601688,
+    601728,
+    601857,
+    601888,
+    601899,
+    601919,
+    601988,
+    603019,
+    603259,
+    603501,
+    603986,
+    603993,
+    688008,
+    688012,
+    688041,
+    688111,
+    688256,
+    688981
+  ],
+  "heldout_symbols": [
+    600030,
+    600050,
+    600150,
+    600760,
+    600900,
+    600930,
+    601600
+  ],
+  "metrics": {
+    "morning_train": {
+      "trades": 12,
+      "capacity_failures": 0,
+      "net_cny": -162.99823999999924,
+      "gross_cny": -19.99999999999922,
+      "cost_cny": 142.99823999999998,
+      "traded_notional": 44227.0,
+      "net_bps": -36.854916679856025,
+      "win_rate": 0.08333333333333333,
+      "mean_trade_bps_ci95": [
+        -72.25913852631388,
+        -22.821922889833367
+      ],
+      "return_on_allocated_inventory_bps": -0.3259964799999985
+    },
+    "afternoon_all": {
+      "trades": 9,
+      "capacity_failures": 1,
+      "net_cny": -128.80211000000162,
+      "gross_cny": -15.000000000001634,
+      "cost_cny": 113.80210999999998,
+      "traded_notional": 45773.0,
+      "net_bps": -28.139320123217097,
+      "win_rate": 0.1111111111111111,
+      "mean_trade_bps_ci95": [
+        -51.356471556215794,
+        -17.38272409746192
+      ],
+      "return_on_allocated_inventory_bps": -0.2576042200000032
+    },
+    "afternoon_heldout": {
+      "trades": 2,
+      "capacity_failures": 0,
+      "net_cny": -52.55372000000055,
+      "gross_cny": -24.000000000000554,
+      "cost_cny": 28.55372,
+      "traded_notional": 16449.0,
+      "net_bps": -31.949492370357195,
+      "win_rate": 0.0,
+      "mean_trade_bps_ci95": [
+        -36.32956045324395,
+        -27.770788785935306
+      ],
+      "return_on_allocated_inventory_bps": -0.1051074400000011
+    }
+  },
+  "sensitivity": [
+    {
+      "extra_cost_bps": 0,
+      "net_cny": -128.80211000000162
+    },
+    {
+      "extra_cost_bps": 2,
+      "net_cny": -137.95671000000164
+    },
+    {
+      "extra_cost_bps": 5,
+      "net_cny": -151.68861000000166
+    },
+    {
+      "extra_cost_bps": 10,
+      "net_cny": -174.57511000000162
+    },
+    {
+      "extra_cost_bps": 20,
+      "net_cny": -220.3481100000016
+    }
+  ],
+  "parameters": {
+    "budget_per_symbol": 100000,
+    "latency_seconds": 1,
+    "slippage_ticks_per_leg": 1,
+    "entry_participation_top_depth": 0.01,
+    "exit_participation_top_depth": 0.1,
+    "max_order_notional": 10000,
+    "commission_rate": 0.0002,
+    "commission_min": 5,
+    "transfer_per_leg": 1e-05,
+    "sell_stamp_tax": 0.0005,
+    "roundtrips_per_symbol_per_session": 1
+  },
+  "evaluation_status": "Exploratory chronological split: sizing revised after pilot afternoon inspection. Failed-capacity P&L is hypothetical markout, not executable cash.",
+  "limitations": [
+    "Single date only; no independent day validation.",
+    "Morning parameter search has selection bias; afternoon is the only time holdout.",
+    "Starting settled inventory and cash required; repurchases cannot be resold that day.",
+    "Snapshot depth is not an execution guarantee; 1-second latency and 1-tick slippage are assumptions.",
+    "No full order-book reconstruction; order codes are summarized without inventing their semantics.",
+    "Stock bootstrap does not remove common intraday market shocks.",
+    "Returns measure incremental cash against holding identical shares, not total portfolio return."
+  ]
+}

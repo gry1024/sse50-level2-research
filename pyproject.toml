@@ -1,0 +1,13 @@
+[project]
+name = "sse50-level2-research"
+version = "0.1.0"
+description = "Reproducible SSE50 Level-2 microstructure and cost-aware execution research"
+requires-python = ">=3.10"
+dependencies = ["pyarrow>=15.0", "polars>=1.0", "numpy>=1.26", "matplotlib>=3.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
